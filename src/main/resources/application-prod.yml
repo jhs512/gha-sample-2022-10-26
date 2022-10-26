@@ -14,7 +14,7 @@ spring:
 logging:
   level:
     root: info
-    com.ll.exam.githubactionssample.app: info
+    com.ll.exam.ghasample.app: info
     org.hibernate.type.descriptor.sql: info
 custom:
   site:
