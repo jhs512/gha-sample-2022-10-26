@@ -13,9 +13,13 @@ public class SecurityConfig {
         http
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
+                                .antMatchers("/favicon.ico").permitAll()
+                                .antMatchers("/resource/**").permitAll()
+                                .antMatchers("/gen-file/**").permitAll()
                                 .antMatchers("/actuator/**").permitAll()
                                 .anyRequest().authenticated()
-                );
+                )
+                .formLogin();
 
         return http.build();
     }

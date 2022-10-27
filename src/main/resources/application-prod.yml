@@ -17,5 +17,6 @@ logging:
     com.ll.exam.ghasample.app: info
     org.hibernate.type.descriptor.sql: info
 custom:
+  genFileDirPath: /gen
   site:
     baseUrl: "https://site-a.com"
