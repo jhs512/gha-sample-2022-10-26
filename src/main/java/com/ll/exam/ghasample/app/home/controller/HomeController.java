@@ -1,5 +1,6 @@
 package com.ll.exam.ghasample.app.home.controller;
 
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,7 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 public class HomeController {
     @GetMapping("/")
     @ResponseBody
-    public String showMain(HttpServletRequest req) {
-        return "IP : " + req.getRemoteAddr();
+    public String showMain(HttpServletRequest req, Environment env)
+    {
+        return "!IP : " + env.getProperty("hostname");
     }
 }
