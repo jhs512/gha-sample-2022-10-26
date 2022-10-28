@@ -11,6 +11,6 @@ public class HomeController {
     @GetMapping("/")
     @ResponseBody
     public String showMain(HttpServletRequest req) {
-        return "IP : " + req.getRemoteAddr();
+        return "!IP : " + req.getRemoteAddr();
     }
 }
