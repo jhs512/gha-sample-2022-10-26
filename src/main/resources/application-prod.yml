@@ -1,4 +1,6 @@
 spring:
+  redis:
+    host: redis-1-service
   datasource:
     url: jdbc:mariadb://${prodDbIp}:3306/ghaSample__prod?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
     username: ${prodDbId}
@@ -11,6 +13,12 @@ spring:
         use_sql_comments: false
     hibernate:
       ddl-auto: none
+  security:
+    user:
+      name: user
+      password: pass
+      roles:
+        - MEMBER
 logging:
   level:
     root: info
